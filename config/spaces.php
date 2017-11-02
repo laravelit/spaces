@@ -53,7 +53,7 @@ return [
     |
     */
 
-    'pretend' => [
+    'pretend_spaces' => [
 
         'enabled' => false,
 

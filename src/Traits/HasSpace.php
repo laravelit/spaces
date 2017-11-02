@@ -45,8 +45,8 @@ trait HasSpace
      */
     public function use($space, $all = false)
     {
-        if ($this->isPretendEnabled()) {
-            return $this->pretend('use');
+        if ($this->isPretendSpacesEnabled()) {
+            return $this->pretendSpaces('use');
         }
 
         return $this->{$this->getMethodName('use', $all)}($space);
@@ -161,9 +161,9 @@ trait HasSpace
      *
      * @return bool
      */
-    private function isPretendEnabled()
+    private function isPretendSpacesEnabled()
     {
-        return (bool) config('spaces.pretend.enabled');
+        return (bool) config('spaces.pretend_spaces.enabled');
     }
 
     /**
@@ -172,9 +172,9 @@ trait HasSpace
      * @param string $option
      * @return bool
      */
-    private function pretend($option)
+    private function pretendSpaces($option)
     {
-        return (bool) config('spaces.pretend.options.' . $option);
+        return (bool) config('spaces.pretend_spaces.options.' . $option);
     }
 
     /**

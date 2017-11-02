@@ -4,7 +4,7 @@ namespace Laravelit\Spaces;
 
 use Illuminate\Support\ServiceProvider;
 
-class RolesServiceProvider extends ServiceProvider
+class SpacesServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
